@@ -1,0 +1,22 @@
+* {
+	font-family: helvetica;
+	font-size: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.body {
+	font-size: 1.25em;
+}
+
+.zip {
+	font-size: .75em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
