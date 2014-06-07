@@ -3,6 +3,12 @@
 	font-size: 100%;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
 .container {
 	margin: 0 auto;
 	width: 50%;
@@ -14,6 +20,12 @@
 
 .zip {
 	font-size: .75em;
+}
+
+.top {
+	position: top;
+	background-color: darkgrey;
+	height: 2em;
 }
 
 h2 {
