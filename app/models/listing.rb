@@ -1,7 +1,7 @@
 class Listing < ActiveRecord::Base
 
-	validate :title, :presence => true
-	validate :body, :presence => true
-	validate :zip, :presence => true
+	validates :title, :presence => true
+	validates :body, :presence => true
+	validates :zip, :presence => true
 
 end
