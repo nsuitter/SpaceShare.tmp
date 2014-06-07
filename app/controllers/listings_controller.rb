@@ -8,11 +8,11 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new 
-		3.times {  @listing.photos.build  }
+	    @listing.photos.build
 	end
 
 	def create
-		@listing = Listing.new(params[:listing].permit(:title, :body, :zip, :photo_attributes))
+		@listing = Listing.new( listing_params )
 
 		if @listing.valid? and @listing.save
 			redirect_to listings_path
@@ -26,8 +26,8 @@ class ListingsController < ApplicationController
 	# Use strong_parameters for attribute whitelisting
 	# Be sure to update your create() and update() controller methods.
 
-	def photo_params
-	  params.require(:photo).permit(:picture)
+	def listing_params
+	  params.require(:listing).permit(:title, :body, :zip, photos_attributes: [:picture, :listing_id])
 	end
 
 end
