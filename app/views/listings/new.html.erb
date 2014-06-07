@@ -11,5 +11,11 @@
 	</br>
 	<%= f.text_field :zip %>
 	</br>
+	<h3>Photos</h3>
+	<%= f.fields_for :photos do |photo_form| %>
+		<% photo_form.file_field :picture %>
+	<% end %>
+	</hr>
+	</br>
 	<%= f.submit %>
 <% end %>

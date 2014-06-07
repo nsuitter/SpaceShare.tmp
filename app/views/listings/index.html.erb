@@ -5,4 +5,8 @@
     <h2><%= listing.title %></h2>
     <p class="body"><%= listing.body %></p>
     <p class="zip"><%= listing.zip %></p>
-  <% end %>
+	<% for photo in listing.photos %>
+		<%= image_tag photo.picture.url(:medium) %>
+	<% end %>
+
+<% end %>
