@@ -1,3 +1,6 @@
+/*******************************************
+Reset
+********************************************/
 * {
 	font-family: helvetica;
 	font-size: 100%;
@@ -5,13 +8,67 @@
 
 body {
 	margin: 0;
-	padding: 0;
+
 }
 
+/*******************************************
+Nav
+********************************************/
+h1 {
+	margin: 0;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+ul {
+	display: inline;
+}
+
+li {
+	list-style: none;
+	display: inline;
+	margin-right: 2em;
+}
+
+a {
+	text-decoration: none;
+	color: #777777;
+}
+
+.navbar {
+	margin: .5em;
+	border: 1px solid #e7e7e7;
+	border-radius: .2em;
+	position: fixed;
+	right: 0;
+	left: 0;
+	background-color: #f8f8f8;
+	height: 2em;
+	vertical-align: middle;
+	line-height: 2em;
+}
+
+.brand {
+	padding-left: 2em;
+	font-size: 1.2em;
+}
+
+.outer-nav {
+	height: 200px;
+	background-color: blue;
+	position: fixed;
+}
+
+/*******************************************
+Body
+********************************************/
 
 .container {
 	margin: 0 auto;
 	width: 50%;
+	padding-top: 4em;
 }
 
 .body {
@@ -22,13 +79,14 @@ body {
 	font-size: .75em;
 }
 
-.top {
-	position: top;
-	background-color: darkgrey;
-	height: 2em;
+p {
+	height: 17em;
 }
 
-h2 {
-	font-size: 2em;
+.search {
+	background: url('/assets/3.jpg') center no-repeat;
+	height: 1200px;
+	background-size: 100%;
 }
+
 
