@@ -17,3 +17,5 @@
 
 # Ignore images that get uploaded
 /public/photos
+
+.DS_Store
