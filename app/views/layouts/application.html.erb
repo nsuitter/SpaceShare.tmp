@@ -7,22 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class"outer-nav">
-	<div class="navbar">
-	  <div class="navbar-inner">
-	    <a class="brand" href="/listings">SpaceShare</a>
-	    <ul class="nav">
-	      <li class=""><a href="/listings">Home</a></li>
-	      <li class=""><a href="/listings/new">List your space!</a></li>
-	    </ul>
-	  </div>
-	</div>
-</div>
 
-
-  <div class="container">
-    <%= yield %>
+  <div class="outer-nav">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="/listings">SpaceShare</a>
+        <ul class="nav">
+          <li class=""><a href="/listings">Home</a></li>
+          <li class=""><a href="/listings/new">List your space!</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+  <%= yield %>
 
 </body>
 </html>

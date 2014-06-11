@@ -4,6 +4,7 @@ Reset
 * {
 	font-family: helvetica;
 	font-size: 100%;
+	box-sizing: border-box;
 }
 
 body {
@@ -37,17 +38,24 @@ a {
 	color: #777777;
 }
 
+.outer-nav{
+	height: 32px;
+	position: fixed;
+	z-index: 99;
+}
+
 .navbar {
 	margin: .5em;
 	border: 1px solid #e7e7e7;
 	border-radius: .2em;
-	position: fixed;
 	right: 0;
 	left: 0;
+	position: fixed;
 	background-color: #f8f8f8;
 	height: 2em;
 	vertical-align: middle;
 	line-height: 2em;
+	z-index: 100;
 }
 
 .brand {
@@ -55,14 +63,9 @@ a {
 	font-size: 1.2em;
 }
 
-.outer-nav {
-	height: 200px;
-	background-color: blue;
-	position: fixed;
-}
 
 /*******************************************
-Body
+Listing-Index-Specific Body
 ********************************************/
 
 .container {
@@ -79,14 +82,76 @@ Body
 	font-size: .75em;
 }
 
-p {
-	height: 17em;
+.search-background {
+	background: url('/assets/3.2.jpeg') center no-repeat;
+	height: 500px;
+	position: relative;
+	top: 3em;
+	z-index: 0;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.35);
 }
 
-.search {
-	background: url('/assets/3.jpg') center no-repeat;
-	height: 1200px;
-	background-size: 100%;
+.search-bar {
+	background: rgba(57, 60, 61, 0.8);
+	border-radius: 5px;
+	max-width: 25.7em;
+	margin: 0 auto;
+	top: 50%;
+	position: relative;
+	border: 1px solid black;
 }
+
+.search-bar input {
+	margin: .4em;
+	border-radius: 3px;
+	display: inline-block;
+	border-style: none;
+	height: 2em;
+	font-weight: 300;
+}
+
+input[type="num"] {
+	width: 20em;
+	padding-left: .5em;
+	margin-right: 0;
+}
+
+input[type="submit"] {
+	background: linear-gradient(#36B1F3, #349ADD);;
+	margin-left: 0;
+	color: white;
+	padding-left: .5em;
+	padding-right: .5em;
+	float: right;
+}
+
+input:focus {
+
+}
+
+/*******************************************
+New-Listing-Specific Body
+********************************************/
+
+.new-listing input {
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+textarea {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.new-listing input[type="file"] {
+	border: none;
+}
+
+.new-listing-button input {
+	float: none;
+	border: none;
+}
+
+
 
 

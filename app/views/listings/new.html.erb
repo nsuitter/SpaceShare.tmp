@@ -1,21 +1,33 @@
-<!--<%= form_for @listing do |f|%>
-	<%= f.label :title, "Title" %>
-	</br>
-	<%= f.text_field :title %>
-	</br>
-	<%= f.label :body, "Description" %>
-	</br>
-	<%= f.text_area :body %>
-	</br>
-	<%= f.label :zip, "Zip" %>
-	</br>
-	<%= f.text_field :zip %>
-	</br>
-	<h3>Photos</h3>
-	<%= f.fields_for :photos do |photo_form| %>
-		<% photo_form.file_field :picture %>
-	<% end %>
-	</hr>
-	</br>
-	<%= f.submit %>
-<% end %> -->
+<div class="container new-listing">
+  <%= form_for @listing do |f|%>
+    <p>
+      <%= f.label :title, "Title" %>
+    </p>
+    <p>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body, "Description" %>
+    </p>
+    <p>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.label :zip, "Zip" %>
+    </p>
+    <p>
+      <%= f.text_field :zip %>
+    </p>
+    <p>
+      <h3>Photos</h3>
+      <%= f.fields_for :photos do |photo_form| %>
+      <% photo_form.file_field :picture %>
+      <% end %>
+    </p>
+
+    </hr>
+    <div class="new-listing-button">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
