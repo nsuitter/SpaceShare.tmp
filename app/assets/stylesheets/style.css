@@ -12,6 +12,10 @@ body {
 
 }
 
+.hidden {
+	display: none;
+}
+
 /*******************************************
 Nav
 ********************************************/
@@ -82,12 +86,17 @@ Listing-Index-Specific Body
 	font-size: .75em;
 }
 
+.search-section {
+	height: 500px;
+	top: 3em;
+	position: relative;
+}
+
 .search-background {
 	background: url('/assets/3.2.jpeg') center no-repeat;
 	height: 500px;
-	position: relative;
 	top: 3em;
-	z-index: 0;
+	z-index: 5;
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.35);
 }
 
@@ -99,6 +108,7 @@ Listing-Index-Specific Body
 	top: 50%;
 	position: relative;
 	border: 1px solid black;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.35);
 }
 
 .search-bar input {
@@ -150,8 +160,25 @@ textarea {
 .new-listing-button input {
 	float: none;
 	border: none;
+	font-weight: 300;
 }
 
+.add-image {
+	background-color: #648F00;
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.add-image p {
+	font-size: 3em;
+	color: white;
+	margin: 10px;
+	padding-bottom: 2px;
+	position: relative;
+	line-height: 41px;
+}
 
 
 

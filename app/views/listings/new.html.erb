@@ -21,9 +21,12 @@
     <p>
       <h3>Photos</h3>
       <%= f.fields_for :photos do |photo_form| %>
-      <% photo_form.file_field :picture %>
+        <% photo_form.file_field :picture, class: "img", hidden: "" %>
       <% end %>
     </p>
+    <div class="add-image">
+      <p>+</p>
+    </div>
 
     </hr>
     <div class="new-listing-button">
@@ -31,3 +34,14 @@
     </div>
   <% end %>
 </div>
+
+<script>
+  var upload = document.querySelector(".add-image")
+  upload.addEventListener("click", newImage)
+
+  function newImage() {
+    debugger
+    var hiddenUpload = document.querySelector('[hidden]')
+    hiddenUpload.removeAttribute("hidden")
+  }
+</script>

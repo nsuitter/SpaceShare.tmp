@@ -1,13 +1,16 @@
-<section class="search-background">
-  <div class="search-bar">
-    <input type="num" placeholder="Search by zip code"/>
-    <input type="submit" value="Search" />
-  </div>
-</section>
+
+  <section class="search-section">
+    <div class="search-background">
+      <div class="search-bar">
+        <input type="num" placeholder="Search by zip code"/>
+        <input type="submit" value="Search" />
+      </div>
+    </div>
+  </section>
 
 <div class="container">
   <% for listing in @listings %>
-  <div class="listing" hidden="">
+  <div class="listing">
     <h2><%= listing.title %></h2>
     <p class="body">
       <%= listing.body %>
@@ -21,3 +24,27 @@
   </div>
   <% end %>
 </div>
+
+<script>
+  var listing = document.querySelector(".zip");
+  var result = parseInt(listing.textContent);
+  var search = document.querySelector('input[type="num"]');
+
+  search.addEventListener("enter", searchIt);
+
+  function searchIt () {
+    // e.preventDefault();
+
+    search = parseInt(search.value);
+
+
+
+    if (result == search) {
+      var match = listing.parentElement
+      return "yes!"
+      debugger
+    };
+
+  }
+
+</script>
