@@ -25,26 +25,3 @@
   <% end %>
 </div>
 
-<script>
-  var listing = document.querySelector(".zip");
-  var result = parseInt(listing.textContent);
-  var search = document.querySelector('input[type="num"]');
-
-  search.addEventListener("enter", searchIt);
-
-  function searchIt () {
-    // e.preventDefault();
-
-    search = parseInt(search.value);
-
-
-
-    if (result == search) {
-      var match = listing.parentElement
-      return "yes!"
-      debugger
-    };
-
-  }
-
-</script>
