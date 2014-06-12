@@ -9,7 +9,7 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new 
-	    @listing.photos.build
+	    10.times{ @listing.photos.build }
 	end
 
 	def create

@@ -25,23 +25,23 @@
   <script type="text/javascript">
 
 var listing = document.querySelector(".zip");
-// var result = parseInt(listing.textContent);
 var zip = document.querySelector('input[type="num"]');
+var form = document.querySelector("form");
 
-zip.addEventListener("enter", search);
+form.addEventListener("submit", search);
 
-function search () {
+function search (e) {
+  e.preventDefault();
+
   zip = parseInt(zip.value)
   var url = "http://localhost:3000/zips/?z=" + zip;
-
   fewd.getJSON(url, sayHi)
+}
+
+function sayHi(json) {
+  var object = json
   debugger
 }
-
-function sayHi() {
-  return "Hi"
-}
-
 
   </script>
 
