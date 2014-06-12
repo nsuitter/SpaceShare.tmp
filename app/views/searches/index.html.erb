@@ -15,9 +15,9 @@
 					<% end %>
 				</div>
 				<div class="image-large">
-				<!-- 	<% for photo in match.photos %>
+				<% for photo in match.photos.first(1) %>
 						<%= image_tag photo.picture.url(:large) %>
-					<% end %> -->
+					<% end %>
 				</div>
 			</div>
 		<% end %>
@@ -28,11 +28,24 @@
 //Search listing view by id
 
 var thumb = document.querySelector(".image-thumb");
-var img = document.querySelector("img");
 
-img.addEventListener("click", sayHi);
 
-function sayHi () {
-  alert("hi");
+thumb.addEventListener("click", sayHi);
+
+function sayHi (e) {
+
+	var large = document.querySelector(".image-large");
+	large.innerHTML = ""
+  var img = e.target.getAttribute("src");
+  var newPath = img.replace("/thumb/", "/large/");
+ 
+  //Set Large image
+  var large = document.querySelector(".image-large");
+  var newImg = document.createElement("img");
+
+  large.appendChild(newImg);
+
+  newImg.setAttribute("src", newPath)
+
 }
 </script>
