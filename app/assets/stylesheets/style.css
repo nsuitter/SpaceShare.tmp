@@ -169,7 +169,7 @@ Listing-Matches Results
 New-Listing-Specific Body
 ********************************************/
 
-.new-listing input {
+.new-listing input[type="text"] {
 	border: 1px solid black;
 	border-radius: 3px;
 }
@@ -185,8 +185,13 @@ textarea {
 	border: none;
 }
 
+.new-listing input[type="file"]:focus {
+	outline: none;
+}
+
 .new-listing-button input {
 	font-weight: 300;
+	outline: none;
 }
 
 .images {
