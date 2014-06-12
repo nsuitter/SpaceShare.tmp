@@ -16,6 +16,10 @@ body {
 	display: none;
 }
 
+li {
+	list-style: none;
+}
+
 /*******************************************
 Nav
 ********************************************/
@@ -27,11 +31,11 @@ h2 {
 	font-size: 2em;
 }
 
-ul {
+ul.nav {
 	display: inline;
 }
 
-li {
+.nav li {
 	list-style: none;
 	display: inline;
 	margin-right: 2em;
@@ -120,13 +124,13 @@ Listing-Index-Specific Body
 	font-weight: 300;
 }
 
-input[type="num"] {
+.search-bar input[type="num"] {
 	width: 20em;
 	padding-left: .5em;
 	margin-right: 0;
 }
 
-input[type="submit"] {
+.search-bar input[type="submit"] {
 	background: linear-gradient(#36B1F3, #349ADD);;
 	margin-left: 0;
 	color: white;
@@ -135,8 +139,29 @@ input[type="submit"] {
 	float: right;
 }
 
-input:focus {
 
+/*******************************************
+Listing-Matches Results
+********************************************/
+
+.listing-matches {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.35);
+	background-color: #FAFAFA;
+	border-radius: 3px;
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+.match-title {
+	padding: 1em;
+	margin: 0;
+	border-bottom: 1px solid #DDDDDD;
+	font-weight: bold;
+}
+
+.match-body {
+	padding: .5em;
+	background-color: white;
 }
 
 /*******************************************
@@ -158,8 +183,6 @@ textarea {
 }
 
 .new-listing-button input {
-	float: none;
-	border: none;
 	font-weight: 300;
 }
 

@@ -26,21 +26,50 @@
 
 var listing = document.querySelector(".zip");
 var zip = document.querySelector('input[type="num"]');
-var form = document.querySelector("form");
+var entry = document.querySelector('input[type="num"]');
+var form = document.querySelector(".search-bar");
+var container = document.querySelector(".container");
 
 form.addEventListener("submit", search);
 
 function search (e) {
   e.preventDefault();
 
+  container.innerHTML = "";
+
   zip = parseInt(zip.value)
   var url = "http://localhost:3000/zips/?z=" + zip;
-  fewd.getJSON(url, sayHi)
+  fewd.getJSON(url, createMatches)
+  entry.value = null;
 }
 
-function sayHi(json) {
-  var object = json
-  debugger
+function createMatches(json) {
+  var matches = json
+  matches.forEach(function(match){
+  createMatch(match["title"], match["body"], match["zip"]);
+  });
+}
+
+function createMatch(title, body, zip) {
+  var div1 = document.createElement("div");
+  var div2 = document.createElement("div");
+  var div3 = document.createElement("div");
+  var a = document.createElement("a");
+
+  a.textContent = title;
+  div3.textContent = body;
+
+
+  container.appendChild(div1);
+  div1.appendChild(div2);
+  div1.appendChild(div3);
+  div2.appendChild(a);
+
+
+  div1.classList.add("listing-matches");
+  div2.classList.add("match-title");
+  div3.classList.add("match-body");
+
 }
 
   </script>

@@ -1,27 +1,13 @@
-
-  <section class="search-section">
-    <div class="search-background">
-      <form class="search-bar">
-        <input type="num" placeholder="Search by zip code"/>
-        <input type="submit" value="Search" />
-      </form>
-    </div>
-  </section>
+<section class="search-section">
+  <div class="search-background">
+    <form class="search-bar">
+      <input type="num" placeholder="Search by zip code" autofocus=""/>
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+</section>
 
 <div class="container">
-  <% for listing in @listings %>
-  <div class="listing">
-    <h2><%= listing.title %></h2>
-    <p class="body">
-      <%= listing.body %>
-    </p>
-    <p class="zip">
-      <%= listing.zip %>
-    </p>
-    <% for photo in listing.photos %>
-      <%= image_tag photo.picture.url(:medium) %>
-    <% end %>
-  </div>
-  <% end %>
+
 </div>
 
