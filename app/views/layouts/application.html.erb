@@ -25,8 +25,6 @@
   <script type="text/javascript">
 
 var listing = document.querySelector(".zip");
-var zip = document.querySelector('input[type="num"]');
-var entry = document.querySelector('input[type="num"]');
 var form = document.querySelector(".search-bar");
 var container = document.querySelector(".container");
 
@@ -36,8 +34,8 @@ function search (e) {
   e.preventDefault();
 
   container.innerHTML = "";
-
-  zip = parseInt(zip.value)
+  var entry = document.querySelector('input[type="num"]');
+  zip = parseInt(entry.value)
   var url = "http://localhost:3000/zips/?z=" + zip;
   fewd.getJSON(url, createMatches)
   entry.value = null;
