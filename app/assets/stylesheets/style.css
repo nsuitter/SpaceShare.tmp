@@ -214,5 +214,21 @@ textarea {
 	border-bottom: 1px solid black;
 }
 
+/*******************************************
+Search-Match-Page Body
+********************************************/
 
+.image-thumb img {
+	/*padding*/: .1em;
+	border: 1px solid white;
+}
 
+.image-thumb img:hover {
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.image-large img {
+	display: block;
+	margin: 0 auto;
+}
