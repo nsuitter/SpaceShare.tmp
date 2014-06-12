@@ -162,6 +162,7 @@ Listing-Matches Results
 .match-body {
 	padding: .5em;
 	background-color: white;
+	font-size: .9em;
 }
 
 /*******************************************
@@ -186,6 +187,10 @@ textarea {
 	font-weight: 300;
 }
 
+.images {
+	width: 20em;
+}
+
 .add-image {
 	background-color: #648F00;
 	height: 50px;
@@ -201,6 +206,10 @@ textarea {
 	padding-bottom: 2px;
 	position: relative;
 	line-height: 41px;
+}
+
+.container p.last-child{
+	border-bottom: 1px solid black;
 }
 
 

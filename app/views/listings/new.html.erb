@@ -18,17 +18,17 @@
     <p>
       <%= f.text_field :zip %>
     </p>
-    <p>
+    <p class="last">
       <h3>Photos</h3>
-      <%= f.fields_for :photos do |photo_form| %>
-        <% photo_form.file_field :picture, class: "img", hidden: "" %>
-      <% end %>
+      <div class="images">
+        <%= f.fields_for :photos do |photo_form| %>
+          <% photo_form.file_field :picture, class: "img", hidden: "" %>
+        <% end %>
+      </div>
+      <div class="add-image">
+        <p>+</p>
+      </div>
     </p>
-    <div class="add-image">
-      <p>+</p>
-    </div>
-
-    </hr>
     <div class="new-listing-button">
       <%= f.submit %>
     </div>
