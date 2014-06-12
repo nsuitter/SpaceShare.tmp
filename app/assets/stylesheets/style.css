@@ -144,9 +144,9 @@ Listing-Index-Specific Body
 Listing-Matches Results
 ********************************************/
 
-.listing-matches {
+.listing-match {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.35);
-	background-color: #FAFAFA;
+	background-color: #F8F8F8;
 	border-radius: 3px;
 	margin-bottom: 1em;
 	padding: 0;
