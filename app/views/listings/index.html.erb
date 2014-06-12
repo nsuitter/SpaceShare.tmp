@@ -33,19 +33,20 @@ function search (e) {
 function createMatches(json) {
   var matches = json
   matches.forEach(function(match){
-  createMatch(match["title"], match["body"], match["zip"]);
+  createMatch(match["title"], match["body"], match["zip"], match["id"]);
   });
 }
 
-function createMatch(title, body, zip) {
+function createMatch(title, body, zip, id) {
   var div1 = document.createElement("div");
   var div2 = document.createElement("div");
   var div3 = document.createElement("div");
   var a = document.createElement("a");
 
   a.textContent = title;
-  div3.textContent = body;
+  a.setAttribute("href", "/searches/?id=" + id)
 
+  div3.textContent = body;
 
   container.appendChild(div1);
   div1.appendChild(div2);

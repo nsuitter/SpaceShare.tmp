@@ -221,6 +221,7 @@ Search-Match-Page Body
 .image-thumb img {
 	/*padding*/: .1em;
 	border: 1px solid white;
+	border-radius: 2px;
 }
 
 .image-thumb img:hover {
@@ -231,4 +232,8 @@ Search-Match-Page Body
 .image-large img {
 	display: block;
 	margin: 0 auto;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	height: 500px;
+	border-radius: 5px;
 }
